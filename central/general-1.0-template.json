@@ -1,0 +1,70 @@
+{
+  "id" : "general",
+  "description" : "Correlaciones de parámetros en aplicaciones de Guadaltel.",
+  "version" : "1.0",
+  "components" : "",
+  "responseFilters" : "",
+  "rules" : [ {
+    "referenceName" : "num-j_idt",
+    "correlationExtractor" : {
+      "type" : "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+      "regex" : "j_idt(\\d+)",
+      "matchNr" : -1
+    },
+    "correlationReplacement" : {
+      "type" : "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+      "regex" : "j_idt(\\d+)"
+    },
+    "enabled" : true
+  }, {
+    "referenceName" : "num-j_id",
+    "correlationExtractor" : {
+      "type" : "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+      "regex" : "j_id(\\d+)",
+      "matchNr" : -1
+    },
+    "correlationReplacement" : {
+      "type" : "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+      "regex" : "j_id(\\d+)"
+    },
+    "enabled" : true
+  }, {
+    "referenceName" : "num-viewstate-j_id",
+    "correlationExtractor" : {
+      "type" : "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+      "regex" : "id=\"javax.faces.ViewState\" value=\"j_id(.+?)\""
+    },
+    "correlationReplacement" : {
+      "type" : "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+      "regex" : "j_id([^\"]*)"
+    },
+    "enabled" : true
+  }, {
+    "referenceName" : "num-viewstate",
+    "correlationExtractor" : {
+      "type" : "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+      "regex" : "name=\"javax.faces.ViewState\" id=\"javax.faces.ViewState\" value=\"([^\"]*)\"",
+      "matchNr" : -1
+    },
+    "correlationReplacement" : {
+      "type" : "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+      "regex" : "([^\"]*)"
+    },
+    "enabled" : true
+  }, {
+    "referenceName" : "gforms-1",
+    "correlationExtractor" : {
+      "type" : "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+      "regex" : "A2248:panel-vistas:infoTable:(\\d+)",
+      "matchNr" : -1
+    },
+    "correlationReplacement" : {
+      "type" : "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+      "regex" : "A2248:panel-vistas:infoTable:(\\d+)"
+    },
+    "enabled" : true
+  } ],
+  "dependencies" : [ ],
+  "repositoryId" : "central",
+  "changes" : "Nueva versión"
+}

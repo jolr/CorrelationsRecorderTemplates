@@ -1,0 +1,35 @@
+{
+  "id" : "gforms",
+  "description" : "Ejemplo de correlaciones para una aplicación concreta.",
+  "version" : "1.0",
+  "components" : "",
+  "responseFilters" : "",
+  "rules" : [ {
+    "referenceName" : "num-j_idt",
+    "correlationExtractor" : {
+      "type" : "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+      "regex" : "j_idt(\\d+)",
+      "matchNr" : -1
+    },
+    "correlationReplacement" : {
+      "type" : "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+      "regex" : "j_idt(\\d+)"
+    },
+    "enabled" : true
+  }, {
+    "referenceName" : "gforms-1",
+    "correlationExtractor" : {
+      "type" : "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+      "regex" : "A2248:panel-vistas:infoTable:(\\d+)",
+      "matchNr" : -1
+    },
+    "correlationReplacement" : {
+      "type" : "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+      "regex" : "A2248:panel-vistas:infoTable:(\\d+)"
+    },
+    "enabled" : true
+  } ],
+  "dependencies" : [ ],
+  "repositoryId" : "guadaltel",
+  "changes" : "Nueva versión"
+}

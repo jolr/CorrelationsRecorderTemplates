@@ -1,5 +1,8 @@
 {
   "general" : {
     "versions" : [ "1.0" ]
+  },
+  "gforms" : {
+    "versions" : [ "1.0" ]  
   }
 }
